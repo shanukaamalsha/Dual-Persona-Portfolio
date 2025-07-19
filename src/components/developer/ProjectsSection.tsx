@@ -1,71 +1,24 @@
+import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { FadeInUp, SlideInLeft } from '@/components/ScrollAnimations';
 
 export const DevProjectsSection = () => {
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'JWT'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, file sharing, and team collaboration features.',
-      technologies: ['Vue.js', 'Express', 'Socket.io', 'PostgreSQL'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'Tailwind'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Portfolio CMS',
-      description: 'Content management system for portfolios with drag-and-drop interface and real-time preview.',
-      technologies: ['Next.js', 'Prisma', 'NextAuth', 'Vercel'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Chat Application',
-      description: 'Real-time chat application with rooms, private messaging, and file sharing capabilities.',
-      technologies: ['React', 'Socket.io', 'Node.js', 'Redis'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Learning Platform',
-      description: 'Online learning platform with video streaming, progress tracking, and interactive quizzes.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'AWS S3'],
-      image: '/placeholder.svg',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    }
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/developer-projects.json')
+      .then(response => response.json())
+      .then(data => setProjects(data))
+      .catch(error => console.error('Error loading projects:', error));
+  }, []);
 
   const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const allProjects = projects;
 
   return (
-    <section className="py-20 relative">
+    <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-6">
         <FadeInUp>
           <div className="text-center mb-16">
@@ -148,16 +101,16 @@ export const DevProjectsSection = () => {
           </div>
         </div>
 
-        {/* Other Projects Grid */}
+        {/* All Projects Grid */}
         <div>
           <FadeInUp>
             <h3 className="text-2xl font-semibold text-dev-foreground mb-8 font-mono">
-              {'// Other Noteworthy Projects'}
+              {'// All Projects'}
             </h3>
           </FadeInUp>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((project, index) => (
+            {allProjects.filter(project => !project.featured).map((project, index) => (
               <SlideInLeft key={project.title} delay={index * 100}>
                 <Card className="bg-dev-card border-dev-border p-6 dev-border-glow h-full flex flex-col group hover:border-dev-primary transition-all duration-300">
                   <div className="flex justify-between items-start mb-4">

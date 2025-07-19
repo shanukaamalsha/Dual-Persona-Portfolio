@@ -3,6 +3,7 @@ import { ModeToggle } from './ModeToggle';
 import { ContactSection } from './ContactSection';
 
 // Developer Components
+import { DevNavigation } from './developer/Navigation';
 import { DevHeroSection } from './developer/HeroSection';
 import { DevAboutSection } from './developer/AboutSection';
 import { DevSkillsSection } from './developer/SkillsSection';
@@ -10,6 +11,7 @@ import { DevProjectsSection } from './developer/ProjectsSection';
 import { DevExperienceSection } from './developer/ExperienceSection';
 
 // Designer Components
+import { DesignerNavigation } from './designer/Navigation';
 import { DesignerHeroSection } from './designer/HeroSection';
 import { DesignerAboutSection } from './designer/AboutSection';
 import { DesignerGallerySection } from './designer/GallerySection';
@@ -35,26 +37,27 @@ export const Portfolio = () => {
 
   return (
     <div className="min-h-screen transition-all duration-500">
+      {mode === 'developer' ? <DevNavigation /> : <DesignerNavigation />}
       <ModeToggle mode={mode} onModeChange={handleModeChange} />
       
       {mode === 'developer' ? (
         <>
-          <DevHeroSection />
-          <DevAboutSection />
-          <DevSkillsSection />
+          <div id="home"><DevHeroSection /></div>
+          <div id="about"><DevAboutSection /></div>
+          <div id="skills"><DevSkillsSection /></div>
           <DevProjectsSection />
           <DevExperienceSection />
         </>
       ) : (
         <>
-          <DesignerHeroSection />
-          <DesignerAboutSection />
+          <div id="home"><DesignerHeroSection /></div>
+          <div id="about"><DesignerAboutSection /></div>
           <DesignerGallerySection />
-          <DesignerTestimonialsSection />
+          <div id="testimonials"><DesignerTestimonialsSection /></div>
         </>
       )}
       
-      <ContactSection mode={mode} />
+      <div id="contact"><ContactSection mode={mode} /></div>
     </div>
   );
 };

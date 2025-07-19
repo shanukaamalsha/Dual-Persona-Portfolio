@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "AI for Beginners",
+    "issuer": "HP LIFE",
+    "date": "April 2025",
+    "credentialUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "Business Email Essentials",
+    "issuer": "HP LIFE",
+    "date": "March 2025",
+    "credentialUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "React Developer Certification",
+    "issuer": "freeCodeCamp",
+    "date": "January 2025",
+    "credentialUrl": "#"
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Algorithms and Data Structures",
+    "issuer": "freeCodeCamp",
+    "date": "December 2024",
+    "credentialUrl": "#"
+  }
+]

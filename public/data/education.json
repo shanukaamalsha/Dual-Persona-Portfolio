@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "degree": "BSc Computer Science",
+    "institution": "University of Colombo",
+    "period": "2023 - 2027",
+    "location": "Colombo, Sri Lanka",
+    "description": [
+      "Currently pursuing degree with focus on Software Engineering",
+      "Relevant coursework: Data Structures, Algorithms, Database Systems",
+      "Active member of the Computer Science Society",
+      "GPA: 3.8/4.0 (Current)"
+    ],
+    "current": true
+  },
+  {
+    "id": 2,
+    "degree": "Advanced Level",
+    "institution": "Royal College",
+    "period": "2021 - 2022",
+    "location": "Colombo, Sri Lanka",
+    "description": [
+      "Completed A/L in Mathematics, Physics, and Chemistry",
+      "Achieved 3A passes with distinction in Mathematics",
+      "Led the school's computer club and organized coding workshops",
+      "Won inter-school programming competition"
+    ],
+    "current": false
+  }
+]

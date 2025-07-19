@@ -1,97 +1,35 @@
+import { useState, useEffect } from 'react';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { FadeInUp, SlideInLeft } from '@/components/ScrollAnimations';
 
 export const DevExperienceSection = () => {
-  const experiences = [
-    {
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      period: '2024 - Present',
-      location: 'Remote',
-      description: [
-        'Building custom web applications for local businesses and startups',
-        'Delivered 12+ projects with 100% client satisfaction rate',
-        'Specialized in modern React applications with responsive designs',
-        'Managed full project lifecycle from requirements to deployment'
-      ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'AWS'],
-      current: true
-    },
-    {
-      title: 'Frontend Developer Intern',
-      company: 'TechStart Solutions',
-      period: 'Summer 2024',
-      location: 'Colombo, Sri Lanka',
-      description: [
-        'Developed responsive web components using React and Tailwind CSS',
-        'Collaborated with UX team to implement pixel-perfect designs',
-        'Optimized application performance resulting in 40% faster load times',
-        'Participated in code reviews and agile development practices'
-      ],
-      technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Git'],
-      current: false
-    }
-  ];
+  const [experiences, setExperiences] = useState([]);
+  const [education, setEducation] = useState([]);
+  const [certifications, setCertifications] = useState([]);
 
-  const education = [
-    {
-      degree: 'BSc Computer Science',
-      institution: 'University of Colombo',
-      period: '2023 - 2027',
-      location: 'Colombo, Sri Lanka',
-      description: [
-        'Currently pursuing degree with focus on Software Engineering',
-        'Relevant coursework: Data Structures, Algorithms, Database Systems',
-        'Active member of the Computer Science Society',
-        'GPA: 3.8/4.0 (Current)'
-      ],
-      current: true
-    },
-    {
-      degree: 'Advanced Level',
-      institution: 'Royal College',
-      period: '2021 - 2022',
-      location: 'Colombo, Sri Lanka',
-      description: [
-        'Completed A/L in Mathematics, Physics, and Chemistry',
-        'Achieved 3A passes with distinction in Mathematics',
-        'Led the school\'s computer club and organized coding workshops',
-        'Won inter-school programming competition'
-      ],
-      current: false
-    }
-  ];
+  useEffect(() => {
+    // Load experience data
+    fetch('/data/experience.json')
+      .then(response => response.json())
+      .then(data => setExperiences(data))
+      .catch(error => console.error('Error loading experience:', error));
 
-  const certifications = [
-    {
-      title: 'AI for Beginners',
-      issuer: 'HP LIFE',
-      date: 'April 2025',
-      credentialUrl: '#'
-    },
-    {
-      title: 'Business Email Essentials',
-      issuer: 'HP LIFE',
-      date: 'March 2025',
-      credentialUrl: '#'
-    },
-    {
-      title: 'React Developer Certification',
-      issuer: 'freeCodeCamp',
-      date: 'January 2025',
-      credentialUrl: '#'
-    },
-    {
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: 'December 2024',
-      credentialUrl: '#'
-    }
-  ];
+    // Load education data
+    fetch('/data/education.json')
+      .then(response => response.json())
+      .then(data => setEducation(data))
+      .catch(error => console.error('Error loading education:', error));
+
+    // Load certifications data
+    fetch('/data/certifications.json')
+      .then(response => response.json())
+      .then(data => setCertifications(data))
+      .catch(error => console.error('Error loading certifications:', error));
+  }, []);
 
   return (
-    <section className="py-20 relative">
+    <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-6">
         <FadeInUp>
           <div className="text-center mb-16">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Eye, Heart, ExternalLink, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -6,6 +6,7 @@ import { FadeInUp, SlideInLeft } from '@/components/ScrollAnimations';
 
 export const DesignerGallerySection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [projects, setProjects] = useState([]);
 
   const filters = [
     { id: 'all', label: 'All Work', emoji: '🎨' },
@@ -15,95 +16,19 @@ export const DesignerGallerySection = () => {
     { id: 'social', label: 'Social Media', emoji: '📱' }
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Aurora Coffee Co.',
-      category: 'branding',
-      description: 'Complete brand identity for a boutique coffee shop including logo, packaging, and store design.',
-      image: '/placeholder.svg',
-      likes: 234,
-      views: 1200,
-      tags: ['Logo Design', 'Packaging', 'Brand Guidelines']
-    },
-    {
-      id: 2,
-      title: 'TechFlow Dashboard',
-      category: 'web',
-      description: 'Modern SaaS dashboard design with clean UI/UX and intuitive user flows.',
-      image: '/placeholder.svg',
-      likes: 189,
-      views: 890,
-      tags: ['UI/UX', 'Dashboard', 'SaaS']
-    },
-    {
-      id: 3,
-      title: 'Festival Poster Series',
-      category: 'graphics',
-      description: 'Vibrant poster designs for summer music festival with bold typography and colors.',
-      image: '/placeholder.svg',
-      likes: 156,
-      views: 756,
-      tags: ['Poster Design', 'Typography', 'Event']
-    },
-    {
-      id: 4,
-      title: 'EcoLife Social Campaign',
-      category: 'social',
-      description: 'Instagram post templates and story designs for environmental awareness campaign.',
-      image: '/placeholder.svg',
-      likes: 298,
-      views: 1450,
-      tags: ['Social Media', 'Instagram', 'Templates']
-    },
-    {
-      id: 5,
-      title: 'Bloom Skincare',
-      category: 'branding',
-      description: 'Elegant branding for natural skincare brand with soft, organic visual identity.',
-      image: '/placeholder.svg',
-      likes: 321,
-      views: 1680,
-      tags: ['Branding', 'Packaging', 'Beauty']
-    },
-    {
-      id: 6,
-      title: 'FoodieApp Interface',
-      category: 'web',
-      description: 'Mobile app design for food delivery service with seamless ordering experience.',
-      image: '/placeholder.svg',
-      likes: 167,
-      views: 923,
-      tags: ['Mobile App', 'Food Tech', 'UI Design']
-    },
-    {
-      id: 7,
-      title: 'Retro Gaming Icons',
-      category: 'graphics',
-      description: 'Pixel-perfect icon set inspired by classic arcade games with modern twist.',
-      image: '/placeholder.svg',
-      likes: 432,
-      views: 2100,
-      tags: ['Icon Design', 'Gaming', 'Pixel Art']
-    },
-    {
-      id: 8,
-      title: 'Mindful Moments',
-      category: 'social',
-      description: 'Calming social media templates for meditation and wellness brand.',
-      image: '/placeholder.svg',
-      likes: 245,
-      views: 1340,
-      tags: ['Wellness', 'Templates', 'Mindfulness']
-    }
-  ];
+  useEffect(() => {
+    fetch('/data/designer-projects.json')
+      .then(response => response.json())
+      .then(data => setProjects(data))
+      .catch(error => console.error('Error loading designer projects:', error));
+  }, []);
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section className="py-20 relative">
+    <section id="gallery" className="py-20 relative">
       <div className="container mx-auto px-6">
         <FadeInUp>
           <div className="text-center mb-16">
