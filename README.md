@@ -12,6 +12,9 @@ The portfolio features two distinct modes:
   </p>
 
 - 💻 **Developer Mode** – Showcases your technical work, projects, and coding experience in a clean and professional layout.
+  <p align="center">
+  <img src="https://i.postimg.cc/Y0RHHZpd/image.png" alt="Dual Persona Portfolio Preview" width="800"/>
+  </p>
 
 Users can switch seamlessly between both personas, providing an engaging and flexible experience for portfolio viewers.
 
