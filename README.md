@@ -7,6 +7,10 @@ This is a modern dual-mode portfolio website built using **React** and **Vite**,
 The portfolio features two distinct modes:
 
 - 🎨 **Designer Mode** – Highlights your creative and design-focused projects, with animations, vibrant visuals, and a modern aesthetic.
+  <p align="center">
+  <img src="https://i.postimg.cc/135zf02g/image.png" alt="Dual Persona Portfolio Preview" width="800"/>
+  </p>
+
 - 💻 **Developer Mode** – Showcases your technical work, projects, and coding experience in a clean and professional layout.
 
 Users can switch seamlessly between both personas, providing an engaging and flexible experience for portfolio viewers.
