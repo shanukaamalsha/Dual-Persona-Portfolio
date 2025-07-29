@@ -2,38 +2,22 @@
   {
     "id": 1,
     "degree": "Higher Diploma in Computing & Software Engineering",
-    "institution": "Cardiff Metropolitan University",
-    "period": "2024 - Present",
-    "location": "Colombo, Sri Lanka",
+    "institution": "",
+    "period": "",
+    "location": "",
     "description": [
-      "Currently pursuing a Higher Diploma in Computing & Software Engineering.",
-      "Developing practical skills and theoretical knowledge essential for software development and computing disciplines."
+      ""
     ],
     "current": true
   },
   {
     "id": 2,
-    "degree": "OTHM Diploma in Business Administration (Level 3)",
-    "institution": "ICBT Campus",
+    "degree": "Diploma in English",
+    "institution": "",
     "period": "Oct 2024 - Mar 2025",
-    "location": "Colombo, Sri Lanka",
+    "location": "",
     "description": [
-      "Completed foundational coursework in business administration, management principles, and communication strategies.",
-      "Gained essential knowledge in organizational behavior, marketing, statistics and finance applicable to real-world business settings",
-      "Developed strong analytical and leadership skills through team projects and presentations."
-    ],
-    "current": false
-  },
-  {
-    "id": 3,
-    "degree": "OTHM Diploma in Information and Communication Technology (Level 3)",
-    "institution": "ICBT Campus",
-    "period": "May 2024 - Oct 2024",
-    "location": "Colombo, Sri Lanka",
-    "description": [
-      "Completed foundational coursework in ICT, covering core modules in programming, web development, graphic design, and computer hardware fundamentals.",
-      "Gained hands-on experience with tools like Microsoft Office Suite and various development environments.",
-      "Built a strong foundation in practical ICT skills through real-world projects and lab-based learning."
+      ""
     ],
     "current": false
   }

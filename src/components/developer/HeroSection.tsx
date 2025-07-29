@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Download, Mail, Github, Linkedin, Globe, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FadeInUp, SlideInLeft } from '@/components/ScrollAnimations';
-import developerImage from '../../assets/devPP.png'; 
+import developerImage from '../../assets/designerPP.png'; 
 
 export const DevHeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -110,8 +110,8 @@ export const DevHeroSection = () => {
 
               <div className="flex gap-4 pt-4">
                 {[
-                  { icon: Github, href: 'https://github.com/shanukaamalsha' },
-                  { icon: Linkedin, href: 'https://www.linkedin.com/in/shanuka-amalsha/' }
+                  { icon: Github, href: '' },
+                  { icon: Linkedin, href: '' }
                 ].map(({ icon: Icon, href }, index) => (
                   <a
                     key={index}

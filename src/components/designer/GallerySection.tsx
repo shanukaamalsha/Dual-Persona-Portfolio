@@ -129,7 +129,7 @@ export const DesignerGallerySection = () => {
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                 These are just a few highlights from my portfolio. I’ve got tons more creative projects. Check out my Fiverr to see what I can do for your next big idea!
               </p>
-              <a href="https://www.fiverr.com/silkowip" target='blank'>
+              <a href="" target='blank'>
                 <Button className="bg-white text-designer-primary hover:bg-gray-100 font-semibold">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Work With Me

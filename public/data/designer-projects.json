@@ -3,67 +3,22 @@
     "id": 1,
     "title": "SmartQ – The Ultimate Quiz Game",
     "categories": ["ui", "social"],
-    "description": "SmartQ is a sleek, no-fuss quiz app packed with fresh questions and multiple categories. Perfect for quick, fun brain workouts anytime, anywhere.",
-    "image": "https://i.postimg.cc/d09JxTNW/sqp1.png",
+    "description": "",
+    "image": "",
     "likes": 20,
     "views": 1200,
     "tags": ["UI/UX", "Dashboard", "SaaS"],
-    "link": "https://web.facebook.com/share/p/1YkBUdBSsF/"
+    "link": ""
   },
   {
     "id": 2,
     "title": "Digital Abstract Wall Arts",
     "categories": ["graphics"],
-    "description": "Created custom abstract wall art for a client’s unique vision, delivering multiple refined high-resolution pieces that led to repeat collaborations.",
-    "image": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_portfolio_project_card/v1/attachments/project_item/attachment/5a598c73f1b289b9972d7f550b1846a5-1742417984076/Screenshot%202025-03-20%20022908.png",
+    "description": "",
+    "image": "",
     "likes": 12,
     "views": 890,
     "tags": ["Mockup", "Digital Arts", "Abstract Wall Art"],
-    "link": "https://www.fiverr.com/silkowip"
-  },
-  {
-    "id": 3,
-    "title": "Oil Painting-Style Artwork",
-    "categories": ["graphics"],
-    "description": "Transformed a real photo of Ulm, Germany into a detailed Oil painting, blending artistic elegance with architectural accuracy to match the client’s exact vision.",
-    "image": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_portfolio_project_card/v1/attachments/project_item/attachment/b6e8a7d104adfbffdbfc181ca751fcff-1742417655967/Screenshot%202025-03-20%20022404.png",
-    "likes": 3,
-    "views": 75,
-    "tags": ["Illustration", "Oil Painting", "Digital Art"],
-    "link": "https://www.fiverr.com/silkowip"
-  },
-  {
-    "id": 4,
-    "title": "Vibrant Woman Face – Abstract Art",
-    "categories": ["graphics"],
-    "description": "A vibrant abstract portrait of a woman, blending vivid color palettes with expressive digital brushwork.",
-    "image": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_portfolio_project_card/v1/attachments/project_item/attachment/5a598c73f1b289b9972d7f550b1846a5-1742418000213/Screenshot%202025-03-20%20022742.png",
-    "likes": 23,
-    "views": 1000,
-    "tags": ["Abstract Art", "Digital Art", "Vibrant Illustration"],
-    "link": "https://www.fiverr.com/silkowip"
-  },
-  {
-    "id": 5,
-    "title": "Luxury Lion Emblem Logo Design for Fashion Brand",
-    "categories": ["branding"],
-    "description": "Crafted a high-quality, vibrant golden lion logo embodying luxury and strength for a premium clothing brand.",
-    "image": "https://fiverr-res.cloudinary.com/image/upload/t_attachment_thumb,q_auto,f_auto/v1/secured-attachments/message/delivery_attachments/7a60e467159a5f3f6bb437c4a2332d39-1738511538009/lion-themed-original.jpg?__cld_token__=exp=1753298325~hmac=ae2da3f500c385f6f36d91ebdf418952f0e1f4e03ccd71eb6172001f4d0f1232",
-    "likes": 321,
-    "views": 1680,
-    "tags": ["Logo Design", "Brand Identity", "Typography"],
-    "link": "https://www.fiverr.com/silkowip"
-  },
-  {
-    "id": 6,
-    "title": "Infosphere – Brand Website & Digital Solutions",
-    "categories": ["web", "ui", "social"],
-    "description": "A sleek, modern website for Infosphere showcasing digital solutions like web development, tech tutorials, health & fitness, and finance with an engaging user experience and clear brand identity.",
-    "image": "https://i.postimg.cc/zGrqRPH2/info.png",
-    "likes": 6000,
-    "views": 15051,
-    "tags": ["Tech", "Web Design", "UI/UX"],
-    "link": "https://youtube.com/@infosphere_nexus?si=ef7GIGZj0rmAxNke&sub_confirmation=1"
-
+    "link": ""
   }
 ]

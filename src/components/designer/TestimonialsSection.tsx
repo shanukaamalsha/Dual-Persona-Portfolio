@@ -10,76 +10,31 @@ export const DesignerTestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Fiver Client",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
+      name: "Client",
+      role: "Client",
+      image: "",
       rating: 4,
-      text: "Exceptional, highly recommend, will work with again",
+      text: "Exceptional",
       project: "Digital Art & Graphics",
     },
     {
       id: 2,
-      name: "luxuryfreshllc",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
+      name: "Client",
+      role: "Client",
+      image: "",
       rating: 5,
-      text: "Amazing work took the time to understand me and what I wanted",
+      text: "I'm very satisfied!",
       project: "Digital Art & Graphics",
     },
     {
       id: 3,
-      name: "pontscho",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
+      name: "Client",
+      role: "Client",
+      image: "",
       rating: 5,
-      text: "I'm very satisfied! The result is great - definitely not the last order!",
+      text: "I'm very satisfied!",
       project: "Digital Art & Graphics",
-    },
-    {
-      id: 4,
-      name: "melcherdewind",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
-      rating: 5,
-      text: "Great service, went the full mile.",
-      project: "Digital Art & Graphics",
-    },
-    {
-      id: 5,
-      name: "evgenysch",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
-      rating: 5,
-      text: "Not my first and not my last time working with Opulent. The designs are great every time. I totally recommend!",
-      project: "Digital Art & Graphics",
-    },
-    {
-      id: 6,
-      name: "Fiver Client",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
-      rating: 5,
-      text: "Highly recommend for image quality",
-      project: "Digital Art & Graphics",
-    },
-    {
-      id: 7,
-      name: "evgenysch",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
-      rating: 5,
-      text: "Very nice designs",
-      project: "Digital Art & Graphics",
-    },
-    {
-      id: 8,
-      name: "evgenysch",
-      role: "Client from Fiver",
-      image: "https://i.postimg.cc/qRj9g1VY/client.png",
-      rating: 5,
-      text: "Very good quality",
-      project: "Digital Art & Graphics",
-    },
+    }
   ]
 
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -297,7 +252,7 @@ export const DesignerTestimonialsSection = () => {
                 that made all these clients fall in love with their designs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://www.fiverr.com/silkowip" target="blank">
+                <a href="" target="blank">
                   <button className="bg-white text-designer-primary hover:bg-gray-100 font-semibold px-6 py-3 rounded-full transition-all hover:scale-105">
                     Start Your Project
                   </button>

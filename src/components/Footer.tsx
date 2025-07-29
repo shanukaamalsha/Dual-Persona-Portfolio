@@ -30,31 +30,31 @@ export const Footer = ({ mode }: FooterProps) => {
         <div className="flex space-x-5 text-xl">
           {isDev ? (
             <>
-              <a href="https://github.com/shanukaamalsha" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/shanuka-amalsha/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                 <FaLinkedin />
               </a>
-              <a href="https://www.youtube.com/@infosphere_nexus" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition">
                 <FaYoutube />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61564203497701&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition">
                 <FaFacebook />
               </a>
-              <a href="https://infosphere-nexus.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
                 <FaGlobe />
               </a>
             </>
           ) : (
             <>
-              <a href="https://dribbble.com/opulent_" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
                 <FaDribbble />
               </a>
-              <a href="https://pin.it/xZ1ddiu9X" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition">
                 <FaPinterest />
               </a>
-              <a href="https://www.instagram.com/infospherenexus?igsh=MWV4M3hmY2FzenZ3bw==" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition">
                 <FaInstagram />
               </a>
             </>

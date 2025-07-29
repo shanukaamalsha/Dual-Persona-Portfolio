@@ -61,19 +61,19 @@ export const ContactSection = ({ mode }: ContactSectionProps) => {
     setErrorMessage('');
 
     const payload = {
-      access_key: '516c9c5b-f497-486b-868e-885f782dc96c', // <-- Replace with your actual API key
+      access_key: 'API', // <-- Replace with your actual API key
       name: formData.name,
       email: formData.email,
       projectType: formData.projectType,
       message: formData.message,
       subject: `New message from ${formData.name} via Portfolio Contact Form`,
-      honeypot: formData.honeypot, // should be empty for humans
+      honeypot: formData.honeypot, 
       sender: formData.email,
       replyTo: formData.email,
     };
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('Use Web3Forms for your Contactg Form and Add the API here', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
@@ -330,7 +330,7 @@ export const ContactSection = ({ mode }: ContactSectionProps) => {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, label: 'Email', value: 'hello@shanuka.dev', href: 'mailto:hello@shanuka.dev' },
+                    { icon: Mail, label: 'Email', value: 'hello@shanuka.dev', href: 'mailto:hello@.dev' },
                     { icon: Phone, label: 'Phone', value: '+94 70 123 4567', href: 'tel:+94701234567' },
                     { icon: MapPin, label: 'Location', value: 'Colombo, Sri Lanka' },
                   ].map(({ icon: Icon, label, value, href }) => (
@@ -371,16 +371,16 @@ export const ContactSection = ({ mode }: ContactSectionProps) => {
                 <div className="grid grid-cols-2 gap-3">
                   {(isDev
                     ? [
-                        { name: 'GitHub', url: 'https://github.com/shanukaamalsha', color: 'hover:text-green-600' },
-                        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shanuka-amalsha/', color: 'hover:text-blue-600' },
-                        { name: 'YouTube', url: 'https://www.youtube.com/@infosphere_nexus', color: 'hover:text-red-400' },
-                        { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61564203497701&mibextid=ZbWKwL', color: 'hover:text-purple-600' },
+                        { name: 'GitHub', url: '', color: 'hover:text-green-600' },
+                        { name: 'LinkedIn', url: '', color: 'hover:text-blue-600' },
+                        { name: 'YouTube', url: '', color: 'hover:text-red-400' },
+                        { name: 'Facebook', url: '', color: 'hover:text-purple-600' },
                       ]
                     : [
-                        { name: 'Dribbble', url: 'https://dribbble.com/opulent_', color: 'hover:text-pink-500' },
-                        { name: 'Instagram', url: 'https://www.instagram.com/infospherenexus?igsh=MWV4M3hmY2FzenZ3bw==', color: 'hover:text-purple-500' },
-                        { name: 'Pinterest', url: 'https://pin.it/xZ1ddiu9X', color: 'hover:text-red-500' },
-                        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shanuka-amalsha/', color: 'hover:text-blue-600' },
+                        { name: 'Dribbble', url: '', color: 'hover:text-pink-500' },
+                        { name: 'Instagram', url: '', color: 'hover:text-purple-500' },
+                        { name: 'Pinterest', url: '', color: 'hover:text-red-500' },
+                        { name: 'LinkedIn', url: '', color: 'hover:text-blue-600' },
                       ]
                   ).map(social => (
                     <a

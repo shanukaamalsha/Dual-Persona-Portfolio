@@ -78,9 +78,9 @@ export const DesignerHeroSection = () => {
 
               <div className="flex gap-6 pt-4">
                 {[
-                  { label: 'Dribbble', url: 'https://dribbble.com/opulent_', color: 'text-pink-500' },
-                  { label: 'Pinterest', url: 'https://pin.it/xZ1ddiu9X', color: 'text-blue-500' },
-                  { label: 'Instagram', url: 'https://www.instagram.com/infospherenexus?igsh=MWV4M3hmY2FzenZ3bw==',  color: 'text-purple-500' },
+                  { label: 'Dribbble', url: '', color: 'text-pink-500' },
+                  { label: 'Pinterest', url: '', color: 'text-blue-500' },
+                  { label: 'Instagram', url: '',  color: 'text-purple-500' },
                 ].map((social, index) => (
                   <a
                     key={social.label}
