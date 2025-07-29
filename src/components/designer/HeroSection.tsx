@@ -1,10 +1,13 @@
 import { Sparkles, Heart, Star, Palette } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FadeInUp, SlideInLeft, SlideInRight } from '@/components/ScrollAnimations';
+import designerImage from '../../assets/designerPP.png'; 
+
+
 
 export const DesignerHeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 md:pt-20 lg:pt-24">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {/* Floating shapes */}
@@ -59,25 +62,30 @@ export const DesignerHeroSection = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-gradient-creative text-white font-semibold group hover:scale-105 transition-transform">
-                  <Palette className="w-4 h-4 mr-2 group-hover:animate-bounce-creative" />
-                  View My Work
-                </Button>
-                <Button variant="outline" className="border-designer-primary text-designer-primary hover:bg-designer-primary hover:text-white">
-                  <Heart className="w-4 h-4 mr-2" />
-                  Let's Collaborate
-                </Button>
+                <a href="#gallery">
+                  <Button className="bg-gradient-creative text-white font-semibold group hover:scale-105 transition-transform">
+                    <Palette className="w-4 h-4 mr-2 group-hover:animate-bounce-creative" />
+                    View My Work
+                  </Button>
+                </a>
+                <a href="#contact">
+                  <Button variant="outline" className="border-designer-primary text-designer-primary hover:bg-designer-primary hover:text-white">
+                    <Heart className="w-4 h-4 mr-2" />
+                    Let's Collaborate
+                  </Button>
+                </a>
               </div>
 
               <div className="flex gap-6 pt-4">
                 {[
-                  { label: 'Dribbble', color: 'text-pink-500' },
-                  { label: 'Behance', color: 'text-blue-500' },
-                  { label: 'Instagram', color: 'text-purple-500' },
+                  { label: 'Dribbble', url: 'https://dribbble.com/opulent_', color: 'text-pink-500' },
+                  { label: 'Pinterest', url: 'https://pin.it/xZ1ddiu9X', color: 'text-blue-500' },
+                  { label: 'Instagram', url: 'https://www.instagram.com/infospherenexus?igsh=MWV4M3hmY2FzenZ3bw==',  color: 'text-purple-500' },
                 ].map((social, index) => (
                   <a
                     key={social.label}
-                    href="#"
+                    href={social.url}
+                    target='_blank'
                     className={`${social.color} hover:scale-110 transition-transform font-medium`}
                   >
                     {social.label}
@@ -103,8 +111,12 @@ export const DesignerHeroSection = () => {
                 </div>
                 
                 {/* Central avatar */}
-                <div className="absolute inset-16 rounded-full bg-gradient-creative shadow-designer flex items-center justify-center creative-float">
-                  <div className="text-6xl">🎨</div>
+                <div className="absolute inset-16 shadow-designer flex items-center justify-center creative-float">
+                  <img
+                    src={designerImage}
+                    alt="Designer"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 
                 {/* Creative elements floating around */}
@@ -131,8 +143,8 @@ export const DesignerHeroSection = () => {
         <FadeInUp delay={600}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-designer-border">
             {[
-              { value: '50+', label: 'Happy Clients', icon: '😊' },
-              { value: '100+', label: 'Designs Created', icon: '🎨' },
+              { value: '12+', label: 'Happy Clients', icon: '😊' },
+              { value: '50+', label: 'Designs Created', icon: '🎨' },
               { value: '2.44%', label: 'Conversion Rate', icon: '📈' },
               { value: '∞', label: 'Creative Ideas', icon: '💡' },
             ].map((stat, index) => (

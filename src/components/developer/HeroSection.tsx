@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Download, Mail, Github, Linkedin, Globe } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, Globe, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FadeInUp, SlideInLeft } from '@/components/ScrollAnimations';
+import developerImage from '../../assets/devPP.png'; 
 
 export const DevHeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -39,7 +40,7 @@ export const DevHeroSection = () => {
   }, [roleIndex]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-dev-background via-dev-secondary to-dev-background">
         <div className="absolute inset-0 opacity-20">
@@ -90,7 +91,7 @@ export const DevHeroSection = () => {
               </div>
 
               <p className="text-lg text-dev-muted-foreground max-w-xl leading-relaxed">
-                CS student who's totally obsessed with turning wild ideas into reality through code. 
+                CS student who's totally obsessed with transforming bold ideas into digital reality.  
                 I live for that moment when everything clicks and the code just works perfectly ✨
               </p>
 
@@ -99,21 +100,23 @@ export const DevHeroSection = () => {
                   <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                   Download CV
                 </Button>
-                <Button variant="outline" className="border-dev-border text-dev-foreground hover:bg-dev-secondary">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Let's Connect
-                </Button>
+                <a href="#contact">
+                  <Button variant="outline" className="border-dev-border text-dev-foreground  hover:text-white hover:bg-dev-secondary">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Let's Connect
+                  </Button>
+                </a>
               </div>
 
               <div className="flex gap-4 pt-4">
                 {[
-                  { icon: Github, href: '#' },
-                  { icon: Linkedin, href: '#' },
-                  { icon: Globe, href: '#' },
+                  { icon: Github, href: 'https://github.com/shanukaamalsha' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/shanuka-amalsha/' }
                 ].map(({ icon: Icon, href }, index) => (
                   <a
                     key={index}
                     href={href}
+                    target="_blank"
                     className="p-3 rounded-full border border-dev-border hover:border-dev-primary 
                              hover:bg-dev-primary/10 transition-all duration-300 group"
                   >
@@ -138,10 +141,13 @@ export const DevHeroSection = () => {
                 </div>
                 
                 {/* Central avatar placeholder */}
-                <div className="absolute inset-12 rounded-full bg-gradient-dev dev-glow flex items-center justify-center">
-                  <div className="text-6xl">👨‍💻</div>
-                </div>
-                
+                <div className="absolute flex items-center justify-center w-[300px] h-[300px]">
+                  <img
+                    src={developerImage}
+                    alt="Developer"
+                    className="w-full h-full object-contain"
+                  />
+                </div>      
                 {/* Code snippets floating around */}
                 <div className="absolute -top-4 -right-4 bg-dev-card border border-dev-border rounded-lg p-3 dev-border-glow">
                   <code className="text-dev-primary text-xs font-mono">const awesome = true;</code>
@@ -160,7 +166,7 @@ export const DevHeroSection = () => {
             {[
               { value: '1+', label: 'Years Experience' },
               { value: '10+', label: 'Projects Built' },
-              { value: '12+', label: 'Happy Clients' },
+              { value: '3+', label: 'Tech Stacks Mastered' },
               { value: '∞', label: 'Lines of Code' },
             ].map((stat, index) => (
               <div key={index} className="text-center group">

@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Code, User, Briefcase, BookOpen, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ModeToggle';
 
-export const DevNavigation = () => {
+interface NavigationProps {
+  mode: 'developer' | 'designer';
+  onModeChange: (mode: 'developer' | 'designer') => void;
+}
+
+export const DevNavigation = ({ mode, onModeChange }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -12,7 +18,7 @@ export const DevNavigation = () => {
     { id: 'skills', label: 'Skills', icon: Briefcase },
     { id: 'projects', label: 'Projects', icon: BookOpen },
     { id: 'experience', label: 'Experience', icon: Briefcase },
-    { id: 'contact', label: 'Contact', icon: Mail }
+    { id: 'contact', label: 'Contact', icon: Mail },
   ];
 
   useEffect(() => {
@@ -42,13 +48,12 @@ export const DevNavigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dev-background/80 backdrop-blur-md border-b border-dev-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dev-background/80 backdrop-blur-md border-b border-dev-border shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Code className="w-8 h-8 text-dev-primary" />
-            <span className="text-xl font-bold text-dev-foreground font-mono">
+            <span className="text-xl font-bold text-dev-primary font-mono">
               {'<dev />'}
             </span>
           </div>
@@ -61,9 +66,9 @@ export const DevNavigation = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => scrollToSection(item.id)}
-                className={`font-mono transition-all duration-300 ${
+                className={`font-mono transition-all duration-300 rounded-full ${
                   activeSection === item.id
-                    ? 'text-dev-primary bg-dev-primary/10 border border-dev-primary/20'
+                    ? 'text-dev-primary bg-dev-primary/10 border border-dev-primary/20 shadow'
                     : 'text-dev-muted-foreground hover:text-dev-primary hover:bg-dev-primary/5'
                 }`}
               >
@@ -73,15 +78,18 @@ export const DevNavigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden text-dev-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
+          {/* Right side: ModeToggle + Mobile Menu Button */}
+          <div className="flex items-center gap-2">
+            <ModeToggle mode={mode} onModeChange={onModeChange} />
+            <Button
+              variant="ghost"
+              size="sm"
+              className="md:hidden text-dev-foreground rounded-full"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -94,10 +102,10 @@ export const DevNavigation = () => {
                   variant="ghost"
                   size="sm"
                   onClick={() => scrollToSection(item.id)}
-                  className={`w-full justify-start font-mono ${
+                  className={`w-full justify-start font-mono rounded-full ${
                     activeSection === item.id
-                      ? 'text-dev-primary bg-dev-primary/10'
-                      : 'text-dev-muted-foreground hover:text-dev-primary'
+                      ? 'text-dev-primary bg-dev-primary/10 shadow'
+                      : 'text-dev-muted-foreground hover:text-dev-primary hover:bg-dev-primary/5'
                   }`}
                 >
                   <item.icon className="w-4 h-4 mr-2" />

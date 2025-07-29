@@ -1,30 +1,41 @@
-[
+[  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "issuer": "university of Moratuwa",
+    "date": "July 2025",
+    "credentialUrl": "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+    "imageUrl": "https://i.postimg.cc/VsqPXb8m/image.png"
+  },
+  {
+    "id": 4,
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco Networking Academy",
+    "date": "July 2025",
+    "credentialUrl": "https://www.credly.com/badges/c99a3801-121b-4dd5-9ef4-6f62f816c9bf/public_url",
+    "imageUrl": "https://i.postimg.cc/sgrd728k/image.png"
+  },
   {
     "id": 1,
     "title": "AI for Beginners",
     "issuer": "HP LIFE",
     "date": "April 2025",
-    "credentialUrl": "#"
+    "credentialUrl": "https://www.linkedin.com/in/shanuka-amalsha/",
+    "imageUrl": "https://i.postimg.cc/jjtxx2vq/image.png"
   },
   {
     "id": 2,
-    "title": "Business Email Essentials",
+    "title": "Business Communications",
     "issuer": "HP LIFE",
-    "date": "March 2025",
-    "credentialUrl": "#"
+    "date": "April 2025",
+    "credentialUrl": "https://www.linkedin.com/in/shanuka-amalsha/",
+    "imageUrl": "https://i.postimg.cc/Jh5b0yLp/image.png"
   },
   {
     "id": 3,
-    "title": "React Developer Certification",
-    "issuer": "freeCodeCamp",
-    "date": "January 2025",
-    "credentialUrl": "#"
-  },
-  {
-    "id": 4,
-    "title": "JavaScript Algorithms and Data Structures",
-    "issuer": "freeCodeCamp",
-    "date": "December 2024",
-    "credentialUrl": "#"
+    "title": "Cybersecurity Awareness",
+    "issuer": "HP LIFE",
+    "date": "March 2025",
+    "credentialUrl": "https://www.linkedin.com/in/shanuka-amalsha/",
+    "imageUrl": "https://i.postimg.cc/Z5TpW8TX/image.png"
   }
 ]

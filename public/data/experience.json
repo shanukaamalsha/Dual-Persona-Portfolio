@@ -1,32 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Freelance Developer",
+    "title": "Freelance Designer",
     "company": "Self-Employed",
     "period": "2024 - Present",
     "location": "Remote",
     "description": [
-      "Building custom web applications for local businesses and startups",
-      "Delivered 12+ projects with 100% client satisfaction rate",
-      "Specialized in modern React applications with responsive designs",
-      "Managed full project lifecycle from requirements to deployment"
+      "Designed Digital wall arts, logos, and creative designs based on client requirements.",
+      "Managed client communication, project coordination and timely delivery of high-quality services.",
+      "Built and maintained long-term client relationships with a focus on quality, creativity, and reliability."
     ],
-    "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "AWS"],
+    "technologies": ["Photoshop", "Illustration", "Logo Design"],
     "current": true
-  },
-  {
-    "id": 2,
-    "title": "Frontend Developer Intern",
-    "company": "TechStart Solutions",
-    "period": "Summer 2024",
-    "location": "Colombo, Sri Lanka",
-    "description": [
-      "Developed responsive web components using React and Tailwind CSS",
-      "Collaborated with UX team to implement pixel-perfect designs",
-      "Optimized application performance resulting in 40% faster load times",
-      "Participated in code reviews and agile development practices"
-    ],
-    "technologies": ["React", "Tailwind CSS", "JavaScript", "Git"],
-    "current": false
   }
 ]

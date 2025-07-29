@@ -12,7 +12,7 @@ export const DesignerAboutSection = () => {
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-designer-foreground/70 max-w-2xl mx-auto text-lg">
-              The creative mind behind the designs that make your brand unforgettable ✨
+              The creative mind turning your vision into stunning visuals ✨
             </p>
           </div>
         </FadeInUp>
@@ -26,7 +26,7 @@ export const DesignerAboutSection = () => {
                   <h3 className="text-2xl font-bold text-designer-foreground">My Design Philosophy</h3>
                 </div>
                 <p className="text-designer-foreground/80 leading-relaxed mb-4">
-                  Design isn't just about making things look pretty (though I absolutely love that part! 💅). 
+                  Design isn't just about making things look pretty. 
                   It's about creating emotional connections, telling stories, and making people feel something special.
                 </p>
                 <p className="text-designer-foreground/80 leading-relaxed">
@@ -89,24 +89,24 @@ export const DesignerAboutSection = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  icon: '🌈',
-                  title: 'Color Obsessed',
-                  description: 'I have 47 different shades of blue in my palette'
+                  icon: '🎮',
+                  title: 'Gamer Mode On',
+                  description: 'Design breaks = intense gaming sessions (my creative cooldown)'
                 },
                 {
                   icon: '☕',
                   title: 'Coffee Powered',
-                  description: 'Average 4 cups per design session (yes, I counted!)'
+                  description: 'Average 2 cups per design session (yes, I counted!)'
                 },
                 {
-                  icon: '🎵',
-                  title: 'Music Lover',
-                  description: 'My designs sync to whatever song I\'m vibing to'
+                  icon: '🎬',
+                  title: 'Video Editing',
+                  description: 'Cuts, transitions, motion – I love storytelling through frames'
                 },
                 {
                   icon: '🌙',
                   title: 'Night Owl',
-                  description: 'Best creative ideas hit at 2 AM (sorry neighbors!)'
+                  description: 'Best creative ideas hit at 2 AM (brain goes brrr)'
                 }
               ].map((fact, index) => (
                 <Card key={index} className="p-6 text-center border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-designer-secondary to-white">

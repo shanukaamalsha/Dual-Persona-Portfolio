@@ -6,30 +6,28 @@ export const DevSkillsSection = () => {
     {
       title: 'Frontend Technologies',
       skills: [
-        { name: 'HTML5', level: 95, color: 'bg-orange-500' },
-        { name: 'CSS3/Sass', level: 90, color: 'bg-blue-500' },
-        { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
-        { name: 'React', level: 80, color: 'bg-blue-400' },
-        { name: 'TypeScript', level: 75, color: 'bg-blue-600' },
+        { name: 'HTML5', level: 80, color: 'bg-orange-500' },
+        { name: 'CSS3/Sass', level: 73, color: 'bg-blue-500' },
+        { name: 'JavaScript', level: 50, color: 'bg-yellow-500' },
+        { name: 'React', level: 55, color: 'bg-blue-400' },
+        { name: 'TypeScript', level: 54, color: 'bg-blue-600' },
       ]
     },
     {
       title: 'Backend & Tools',
       skills: [
-        { name: 'Python', level: 85, color: 'bg-green-500' },
-        { name: 'Java', level: 80, color: 'bg-red-500' },
-        { name: 'C++', level: 75, color: 'bg-blue-700' },
-        { name: 'Git/GitHub', level: 90, color: 'bg-gray-600' },
-        { name: 'VS Code', level: 95, color: 'bg-blue-500' },
+        { name: 'Python', level: 82, color: 'bg-green-500' },
+        { name: 'Java', level: 76, color: 'bg-red-500' },
+        { name: 'C++', level: 68, color: 'bg-blue-700' },
+        { name: 'Git/GitHub', level: 75, color: 'bg-gray-600' },
+        { name: 'VS Code', level: 80, color: 'bg-blue-500' },
       ]
     },
     {
       title: 'Design & Creative',
       skills: [
-        { name: 'Photoshop', level: 90, color: 'bg-blue-800' },
+        { name: 'Photoshop', level: 75, color: 'bg-blue-800' },
         { name: 'UI/UX Design', level: 80, color: 'bg-purple-500' },
-        { name: 'Figma', level: 85, color: 'bg-pink-500' },
-        { name: 'Adobe Creative Suite', level: 75, color: 'bg-red-600' },
       ]
     }
   ];
@@ -89,10 +87,8 @@ export const DevSkillsSection = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Node.js', 'Express', 'MongoDB', 'SQL', 'REST APIs', 'GraphQL',
-                'Docker', 'AWS', 'Firebase', 'Vercel', 'Netlify', 'Linux',
-                'Responsive Design', 'Mobile-First', 'Performance Optimization',
-                'SEO', 'Accessibility', 'Testing', 'Agile', 'Scrum'
+                'SQL', 'Vercel', 'Netlify', 'Linux',
+                'Responsive Design', 'SEO', 'Testing'
               ].map((tech, index) => (
                 <span
                   key={tech}

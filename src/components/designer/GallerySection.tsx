@@ -13,7 +13,8 @@ export const DesignerGallerySection = () => {
     { id: 'branding', label: 'Branding', emoji: '🏷️' },
     { id: 'web', label: 'Web Design', emoji: '💻' },
     { id: 'graphics', label: 'Graphics', emoji: '🎭' },
-    { id: 'social', label: 'Social Media', emoji: '📱' }
+    { id: 'social', label: 'Social Media', emoji: '📱' },
+    { id: 'ui', label: 'UI/UX', emoji: '🖌️' }
   ];
 
   useEffect(() => {
@@ -25,10 +26,12 @@ export const DesignerGallerySection = () => {
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter(project =>
+  activeFilter === 'all' || (project.categories && project.categories.includes(activeFilter))
+);
 
   return (
-    <section id="gallery" className="py-20 relative">
+    <section id="gallery" className="py-20 relative" >
       <div className="container mx-auto px-6">
         <FadeInUp>
           <div className="text-center mb-16">
@@ -84,9 +87,11 @@ export const DesignerGallerySection = () => {
                           <Heart className="w-4 h-4 mr-1" />
                           {project.likes}
                         </Button>
-                        <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 ml-auto">
-                          <ExternalLink className="w-4 h-4" />
-                        </Button>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="ml-auto">
+                          <Button className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30">
+                            <ExternalLink className="w-4 h-4" />
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -122,13 +127,14 @@ export const DesignerGallerySection = () => {
             <div className="bg-gradient-creative rounded-3xl p-8 text-white shadow-xl">
               <h3 className="text-3xl font-bold mb-4">Love what you see? 😍</h3>
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                These are just a few highlights from my portfolio. I've got tons more creative 
-                projects and would love to show you how I can bring your vision to life!
+                These are just a few highlights from my portfolio. I’ve got tons more creative projects. Check out my Fiverr to see what I can do for your next big idea!
               </p>
-              <Button className="bg-white text-designer-primary hover:bg-gray-100 font-semibold">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Full Portfolio
-              </Button>
+              <a href="https://www.fiverr.com/silkowip" target='blank'>
+                <Button className="bg-white text-designer-primary hover:bg-gray-100 font-semibold">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Work With Me
+                </Button>
+              </a>
             </div>
           </div>
         </FadeInUp>

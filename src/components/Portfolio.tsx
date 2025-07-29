@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ModeToggle } from './ModeToggle';
 import { ContactSection } from './ContactSection';
+import { Footer } from './Footer';
+
 
 // Developer Components
 import { DevNavigation } from './developer/Navigation';
@@ -18,7 +20,7 @@ import { DesignerGallerySection } from './designer/GallerySection';
 import { DesignerTestimonialsSection } from './designer/TestimonialsSection';
 
 export const Portfolio = () => {
-  const [mode, setMode] = useState<'developer' | 'designer'>('designer');
+  const [mode, setMode] = useState<'developer' | 'designer'>('developer');
 
   useEffect(() => {
     // Apply theme class to body
@@ -35,29 +37,35 @@ export const Portfolio = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
-    <div className="min-h-screen transition-all duration-500">
-      {mode === 'developer' ? <DevNavigation /> : <DesignerNavigation />}
-      <ModeToggle mode={mode} onModeChange={handleModeChange} />
-      
-      {mode === 'developer' ? (
-        <>
-          <div id="home"><DevHeroSection /></div>
-          <div id="about"><DevAboutSection /></div>
-          <div id="skills"><DevSkillsSection /></div>
-          <DevProjectsSection />
-          <DevExperienceSection />
-        </>
-      ) : (
-        <>
-          <div id="home"><DesignerHeroSection /></div>
-          <div id="about"><DesignerAboutSection /></div>
-          <DesignerGallerySection />
-          <div id="testimonials"><DesignerTestimonialsSection /></div>
-        </>
-      )}
-      
-      <div id="contact"><ContactSection mode={mode} /></div>
-    </div>
-  );
+ return (
+  <div className="min-h-screen transition-all duration-500">
+    {mode === 'developer' ? (
+      <DevNavigation mode={mode} onModeChange={handleModeChange} />
+    ) : (
+      <DesignerNavigation mode={mode} onModeChange={handleModeChange} />
+    )}
+    
+    {mode === 'developer' ? (
+      <>
+        <div id="home"><DevHeroSection /></div>
+        <div id="about"><DevAboutSection /></div>
+        <div id="skills"><DevSkillsSection /></div>
+        <DevProjectsSection />
+        <DevExperienceSection />
+      </>
+    ) : (
+      <>
+        <div id="home"><DesignerHeroSection /></div>
+        <div id="about"><DesignerAboutSection /></div>
+        <DesignerGallerySection />
+        <div id="testimonials"><DesignerTestimonialsSection /></div>
+      </>
+    )}
+
+    <div id="contact"><ContactSection mode={mode} /></div>
+
+    <Footer mode={mode} />
+
+  </div>
+);
 };

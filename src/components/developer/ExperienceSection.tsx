@@ -168,21 +168,44 @@ export const DevExperienceSection = () => {
               {'// Certifications & Achievements'}
             </h3>
           </FadeInUp>
-          
-          <div className="grid md:grid-cols-2 gap-6">
+
+          <div
+            className="grid md:grid-cols-3 gap-6"
+            style={{ gridTemplateColumns: 'repeat(3, minmax(320px, 1fr))' }}
+          >
             {certifications.map((cert, index) => (
               <SlideInLeft key={cert.title} delay={index * 100}>
-                <Card className="bg-dev-card border-dev-border p-4 dev-border-glow group hover:border-dev-primary transition-all duration-300">
-                  <div className="flex justify-between items-start mb-2">
+                <Card
+                  className="bg-dev-card border-dev-border p-6 dev-border-glow group hover:border-dev-primary transition-all duration-300 flex items-center space-x-6"
+                  style={{ minHeight: '240px' }}
+                >
+                  {/* Text */}
+                  <div className="flex-1 flex flex-col justify-center h-full">
                     <h4 className="font-semibold text-dev-foreground group-hover:text-dev-primary transition-colors">
                       {cert.title}
                     </h4>
-                    <a href={cert.credentialUrl} className="text-dev-muted-foreground hover:text-dev-primary transition-colors">
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
+                    <p className="text-dev-primary text-sm font-medium mb-1">{cert.issuer}</p>
+                    <p className="text-dev-muted-foreground text-sm">{cert.date}</p>
                   </div>
-                  <p className="text-dev-primary text-sm font-medium mb-1">{cert.issuer}</p>
-                  <p className="text-dev-muted-foreground text-sm">{cert.date}</p>
+
+                  {/* Certificate Image with rounded corners */}
+                  <div className="w-48 h-40 rounded-md overflow-hidden flex-shrink-0">
+                    <img
+                      src={cert.imageUrl}
+                      alt={`${cert.title} certificate`}
+                      className="w-full h-full object-contain rounded-md"
+                    />
+                  </div>
+
+                  {/* External Link */}
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dev-muted-foreground hover:text-dev-primary transition-colors"
+                  >
+                    <ExternalLink className="w-6 h-6" />
+                  </a>
                 </Card>
               </SlideInLeft>
             ))}

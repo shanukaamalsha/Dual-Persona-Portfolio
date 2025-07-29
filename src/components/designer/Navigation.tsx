@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Palette, User, Heart, Images, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ModeToggle'; // adjust path if needed
 
-export const DesignerNavigation = () => {
+interface NavigationProps {
+  mode: 'developer' | 'designer';
+  onModeChange: (mode: 'developer' | 'designer') => void;
+}
+
+export const DesignerNavigation = ({ mode, onModeChange }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -44,7 +50,7 @@ export const DesignerNavigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-designer-border shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Left: Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-gradient-creative flex items-center justify-center">
               <Palette className="w-5 h-5 text-white" />
@@ -54,8 +60,8 @@ export const DesignerNavigation = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Center: Navigation Links */}
+          <div className="hidden md:flex items-center space-x-1 flex-grow justify-center">
             {navItems.map((item) => (
               <Button
                 key={item.id}
@@ -74,15 +80,18 @@ export const DesignerNavigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden text-designer-foreground rounded-full"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
+          {/* Right: Mode Toggle + Mobile Menu Button */}
+          <div className="flex items-center space-x-2">
+            <ModeToggle mode={mode} onModeChange={onModeChange} />
+            <Button
+              variant="ghost"
+              size="sm"
+              className="md:hidden text-designer-foreground rounded-full"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

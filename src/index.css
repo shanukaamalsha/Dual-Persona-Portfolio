@@ -6,6 +6,11 @@
 All colors MUST be HSL.
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @layer base {
   :root {
     /* Developer Mode - Dark Futuristic */

@@ -9,7 +9,7 @@ interface ModeToggleProps {
 
 export const ModeToggle = ({ mode, onModeChange }: ModeToggleProps) => {
   return (
-    <div className="fixed top-6 right-6 z-50 flex gap-2 bg-card/80 backdrop-blur-md rounded-full p-2 border shadow-lg">
+    <div className="flex gap-2 bg-card/80 backdrop-blur-md rounded-full p-2 border shadow-lg">
       <Button
         variant={mode === 'developer' ? 'default' : 'ghost'}
         size="sm"

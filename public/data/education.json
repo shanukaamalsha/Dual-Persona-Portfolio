@@ -1,30 +1,41 @@
 [
   {
     "id": 1,
-    "degree": "BSc Computer Science",
-    "institution": "University of Colombo",
-    "period": "2023 - 2027",
+    "degree": "Higher Diploma in Computing & Software Engineering",
+    "institution": "Cardiff Metropolitan University",
+    "period": "2024 - Present",
     "location": "Colombo, Sri Lanka",
     "description": [
-      "Currently pursuing degree with focus on Software Engineering",
-      "Relevant coursework: Data Structures, Algorithms, Database Systems",
-      "Active member of the Computer Science Society",
-      "GPA: 3.8/4.0 (Current)"
+      "Currently pursuing a Higher Diploma in Computing & Software Engineering.",
+      "Developing practical skills and theoretical knowledge essential for software development and computing disciplines."
     ],
     "current": true
   },
   {
     "id": 2,
-    "degree": "Advanced Level",
-    "institution": "Royal College",
-    "period": "2021 - 2022",
+    "degree": "OTHM Diploma in Business Administration (Level 3)",
+    "institution": "ICBT Campus",
+    "period": "Oct 2024 - Mar 2025",
     "location": "Colombo, Sri Lanka",
     "description": [
-      "Completed A/L in Mathematics, Physics, and Chemistry",
-      "Achieved 3A passes with distinction in Mathematics",
-      "Led the school's computer club and organized coding workshops",
-      "Won inter-school programming competition"
+      "Completed foundational coursework in business administration, management principles, and communication strategies.",
+      "Gained essential knowledge in organizational behavior, marketing, statistics and finance applicable to real-world business settings",
+      "Developed strong analytical and leadership skills through team projects and presentations."
+    ],
+    "current": false
+  },
+  {
+    "id": 3,
+    "degree": "OTHM Diploma in Information and Communication Technology (Level 3)",
+    "institution": "ICBT Campus",
+    "period": "May 2024 - Oct 2024",
+    "location": "Colombo, Sri Lanka",
+    "description": [
+      "Completed foundational coursework in ICT, covering core modules in programming, web development, graphic design, and computer hardware fundamentals.",
+      "Gained hands-on experience with tools like Microsoft Office Suite and various development environments.",
+      "Built a strong foundation in practical ICT skills through real-world projects and lab-based learning."
     ],
     "current": false
   }
+  
 ]

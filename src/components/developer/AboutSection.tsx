@@ -39,12 +39,11 @@ export const DevAboutSection = () => {
                   {'// The Journey'}
                 </h3>
                 <p className="text-dev-muted-foreground leading-relaxed mb-4">
-                  Started as a curious kid who wondered "how does this website work?" and now I'm deep 
-                  in the rabbit hole of creating digital experiences that actually make people's lives better.
+                  From early curiosity about the web’s inner workings to designing impactful digital solutions, my journey has been driven by passion and purpose.
                 </p>
                 <p className="text-dev-muted-foreground leading-relaxed">
                   Currently pursuing Computer Science while freelancing and building projects that 
-                  challenge me to grow. I believe the best code is not just functional, but elegant and maintainable.
+                  challenge me to grow. I focus on creating clean, efficient code and user experiences that truly resonate.
                 </p>
               </div>
 
@@ -55,7 +54,7 @@ export const DevAboutSection = () => {
                 <div className="space-y-3">
                   {[
                     'Clean, readable code is poetry',
-                    'User experience > everything else',
+                    'User experience always comes first.',
                     'Continuous learning is non-negotiable',
                     'Collaboration makes magic happen'
                   ].map((value, index) => (
@@ -73,7 +72,7 @@ export const DevAboutSection = () => {
                 </h3>
                 <p className="text-dev-muted-foreground leading-relaxed">
                   You'll find me exploring new tech trends, contributing to open-source projects, 
-                  or probably explaining to friends why I get excited about a perfectly optimized algorithm 😄
+                  and actively sharing knowledge through content that supports anyone eager to learn and grow in tech & beyond. 👉 <a href="https://infosphere-nexus.netlify.app/" target="balnk" rel="nooper noreferrer" className="text-dev-primary mb-4 font-mono">Infosphere</a>
                 </p>
               </div>
             </div>
